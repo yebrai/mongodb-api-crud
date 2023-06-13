@@ -1,7 +1,5 @@
-
-
-
-export default withApi(async function handler(req, res) {
+export default async function handler(req, res) {
+    
     const baseUrl = `${process.env.MONGODB_DATA_API_URL}/action`
 
     const fetchOptions = {
@@ -80,4 +78,4 @@ export default withApi(async function handler(req, res) {
       console.error(error);
       res.status(500).json({ error });
     }
-  });
+  };

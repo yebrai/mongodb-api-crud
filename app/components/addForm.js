@@ -18,23 +18,25 @@ function AddForm() {
       title: titleInput,
       description: descriptionInput,
     }
-/*
+
     try {
       
       //await axios.post("http://localhost:5005/api/todos", newTodo)
       // si JS llega a este punto es porque el ToDo se ha creado correctamente
 
       //pasamos el objeto como parametro
-      await createTodoService(newTodo)
+      await fetch("../api", newTodo);
 
       //tenemos que indicarle a react, que la lista se ha actualizado
 
       // Manualmente actualizaremos la lista desde el server
-      props.actualizarLista()
+
     } catch (error) {
       console.log(error);
     }
-*/
+
+    console.log(newTodo)
+
 
   }
   return (
