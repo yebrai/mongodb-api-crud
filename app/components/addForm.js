@@ -25,8 +25,17 @@ function AddForm() {
       // si JS llega a este punto es porque el ToDo se ha creado correctamente
 
       //pasamos el objeto como parametro
-      await fetch("../api", newTodo);
+      const response = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      });
 
+      console.log(response)
+
+      const responseJson = await response.json()
       //tenemos que indicarle a react, que la lista se ha actualizado
 
       // Manualmente actualizaremos la lista desde el server
