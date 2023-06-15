@@ -27,7 +27,7 @@ export default async function handler(req, res) {
             ...fetchOptions,
             body: JSON.stringify({
               ...fetchBody,
-              sort: { postedAt: -1 },
+              //sort: { postedAt: -1 },
             }),
           });
           const readDataJson = await readData.json();

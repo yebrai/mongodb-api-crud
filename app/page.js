@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import AddForm from './components/addForm'
+import AddForm from './components/AddForm'
 
 export default function Home() {
   return (
